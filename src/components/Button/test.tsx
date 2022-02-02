@@ -11,7 +11,7 @@ describe('<Button />', () => {
     expect(screen.getByRole('button', { name: /Buy Now/i })).toHaveStyle({
       height: '4rem',
       'font-size': '1.4rem',
-      padding: '0.8rem 3.2rem'
+      padding: '0.8rem 3rem'
     })
     expect(container.firstChild).toMatchSnapshot()
   })
@@ -20,7 +20,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="small">Buy Now</Button>)
     expect(screen.getByRole('button', { name: /Buy Now/i })).toHaveStyle({
       height: '3rem',
-      'font-size': '1.2rem'
+      'font-size': '1rem'
     })
   })
 
@@ -28,8 +28,8 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="large">Buy Now</Button>)
     expect(screen.getByRole('button', { name: /Buy Now/i })).toHaveStyle({
       height: '5rem',
-      'font-size': '1.6rem',
-      padding: '0.8rem 4.8rem'
+      'font-size': '1.8rem',
+      padding: '0.8rem 5.2rem'
     })
   })
 

@@ -8,7 +8,7 @@ describe('<Divider />', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
-        margin: 5.6rem auto 3.2rem;
+        margin: 9rem auto 3rem;
         height: 0.1rem;
         background: rgba(181,181,181,0.3);
         border: 0;
@@ -16,7 +16,7 @@ describe('<Divider />', () => {
 
       @media (min-width:768px) {
         .c0 {
-          margin: calc(5.6rem * 2.5) auto 5.6rem;
+          margin: calc(9rem * 2.5) auto 9rem;
         }
       }
 
