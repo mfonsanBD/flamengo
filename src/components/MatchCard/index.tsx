@@ -27,7 +27,16 @@ const MatchCard = ({
   stadium
 }: MatchCardProps) => (
   <S.Wrapper>
-    <S.MatchDate>{date}</S.MatchDate>
+    <MediaMatch greaterThan="medium">
+      <S.MatchDate>{date}</S.MatchDate>
+    </MediaMatch>
+
+    <MediaMatch lessThan="medium">
+      <S.MatchDate>
+        {date} - {hour}hs
+      </S.MatchDate>
+    </MediaMatch>
+
     <S.Match>{match}</S.Match>
 
     <S.MatchCardContent>

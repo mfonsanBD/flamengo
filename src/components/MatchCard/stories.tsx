@@ -17,7 +17,7 @@ export default {
 } as Meta
 
 export const Default: Story<MatchCardProps> = (args) => (
-  <div style={{ width: '38.2rem' }}>
+  <div style={{ width: '30rem' }}>
     <MatchCard {...args} />
   </div>
 )
