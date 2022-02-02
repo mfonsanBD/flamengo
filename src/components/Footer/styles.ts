@@ -7,7 +7,11 @@ export const Wrapper = styled.footer`
   overflow: hidden;
 
   ${LogoStyles.Wrapper} {
-    text-align: center;
+    text-align: left;
+
+    ${media.lessThan('medium')`
+      text-align: center;
+    `}
   }
 `
 
