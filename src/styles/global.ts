@@ -1,23 +1,70 @@
-import { createGlobalStyle } from 'styled-components'
+import {
+  createGlobalStyle,
+  css,
+  DefaultTheme,
+  GlobalStyleComponent
+} from 'styled-components'
 
-const GlobalStyles = createGlobalStyle`
+type GlobalStylesProps = {
+  removeBg?: boolean
+}
+
+const GlobalStyles: GlobalStyleComponent<
+  GlobalStylesProps,
+  DefaultTheme
+> = createGlobalStyle`
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Montserrat'), url('/fonts/Montserrat-Bold.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'GoogleSans Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('GoogleSans Medium'), url('/fonts/GoogleSans-Medium.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'GoogleSans Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('GoogleSans Bold'), url('/fonts/GoogleSans-Bold.woff2') format('woff2')
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::after,
+    &::before{
+      box-sizing: inherit;
+    }
   }
 
-  html {
-    font-size: 62.5%;
-  }
+  ${({ theme, removeBg }) => css`
+    html {
+      font-size: 62.5%;
+    }
 
-  html, body, #__next {
-    height: 100%;
-  }
+    body {
+      font-family: ${theme.font.family.googleSansMedium};
+      font-size: ${theme.font.sizes.medium};
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-  }
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.black};
+      `}
+    }
+  `}
 `
 
 export default GlobalStyles
