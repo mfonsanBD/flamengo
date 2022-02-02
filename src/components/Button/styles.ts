@@ -58,7 +58,7 @@ const wrapperModifiers = {
 
   withIcon: () => css`
     svg {
-      width: 1.5rem;
+      width: 2rem;
     }
   `,
 
