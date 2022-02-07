@@ -13,16 +13,22 @@ export const Wrapper = styled.menu`
 `
 
 export const LogoWrapper = styled.div`
-  width: 8rem;
-  display: inline-block;
-
-  ${media.lessThan('medium')`
+  ${({ theme }) => css`
+    width: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 ${theme.spacings.large};
+
+    ${media.lessThan('medium')`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    `}
   `}
 `
 
