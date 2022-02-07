@@ -10,7 +10,7 @@ describe('<Button />', () => {
     const { container } = renderWithTheme(<Button>Buy Now</Button>)
     expect(screen.getByRole('button', { name: /Buy Now/i })).toHaveStyle({
       height: '4rem',
-      'font-size': '1.4rem',
+      'font-size': '1.8rem',
       padding: '0.8rem 3rem'
     })
     expect(container.firstChild).toMatchSnapshot()
@@ -20,7 +20,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="small">Buy Now</Button>)
     expect(screen.getByRole('button', { name: /Buy Now/i })).toHaveStyle({
       height: '3rem',
-      'font-size': '1rem'
+      'font-size': '1.4rem'
     })
   })
 
