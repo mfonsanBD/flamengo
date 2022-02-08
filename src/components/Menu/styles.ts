@@ -1,14 +1,50 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
+import { MenuProps } from '.'
 
-export const Wrapper = styled.menu`
-  ${({ theme }) => css`
+type WrapperProps = Pick<MenuProps, 'backgroundColor'>
+
+const wrapperModifiers = {
+  white: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.white};
+
+    ${media.lessThan('medium')`
+      height: 7rem;
+
+      ${IconWrapper} {
+        top: ${theme.spacings.small};
+        color: ${theme.colors.black};
+      }
+    `}
+
+    ${MenuLink} {
+      color: ${theme.colors.black};
+    }
+
+    ${LogoWrapper} {
+      svg {
+        fill: ${theme.colors.red};
+      }
+    }
+  `,
+  transparent: (theme: DefaultTheme) => css`
+    background-color: transparent;
+
+    ${MenuLink} {
+      color: ${theme.colors.white};
+    }
+  `
+}
+
+export const Wrapper = styled.menu<WrapperProps>`
+  ${({ theme, backgroundColor }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
     padding: ${theme.spacings.small} 0;
     position: relative;
     z-index: ${theme.layers.menu};
+    ${!!backgroundColor && wrapperModifiers[backgroundColor](theme)}
   `}
 `
 
@@ -26,6 +62,7 @@ export const LogoWrapper = styled.div`
       align-items: center;
       position: absolute;
       left: 50%;
+      top: ${theme.spacings.xxsmall};
       transform: translateX(-50%);
       margin: 0;
     `}
@@ -67,7 +104,6 @@ export const MenuNav = styled.div`
 export const MenuLink = styled.a`
   ${({ theme }) => css`
     position: relative;
-    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;

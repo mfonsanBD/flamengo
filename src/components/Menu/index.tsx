@@ -1,16 +1,21 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu2 as MenuIcon } from '@styled-icons/remix-line/Menu2'
-import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
-import * as S from './styles'
 import Logo from 'components/Logo'
 import MediaMatch from 'components/MediaMatch'
 
-const Menu = () => {
+import * as S from './styles'
+import { Menu2 as MenuIcon } from '@styled-icons/remix-line/Menu2'
+import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
+
+export type MenuProps = {
+  backgroundColor?: 'white' | 'transparent'
+}
+
+const Menu = ({ backgroundColor = 'transparent' }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <S.Wrapper>
+    <S.Wrapper backgroundColor={backgroundColor}>
       <MediaMatch lessThan="medium">
         <S.IconWrapper onClick={() => setIsOpen(true)}>
           <MenuIcon aria-label="Open Menu" />

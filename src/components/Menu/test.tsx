@@ -25,4 +25,16 @@ describe('<Menu />', () => {
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true')
     expect(fullMenuElement).toHaveStyle({ opacity: 0 })
   })
+
+  it('should render menu with white background', () => {
+    renderWithTheme(<Menu backgroundColor="white" />)
+
+    const menu =
+      screen.getByLabelText(/open menu/i).parentElement?.parentElement
+        ?.parentElement
+
+    expect(menu).toHaveStyle({
+      backgroundColor: '#FAFAFA'
+    })
+  })
 })
