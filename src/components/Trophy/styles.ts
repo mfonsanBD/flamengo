@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 1rem;
   align-items: flex-end;
-  justify-content: center;
 `
 
 const trophyModifiers = {
@@ -24,7 +23,9 @@ const trophyModifiers = {
 
 export const Trophy = styled.img<TrophySizeProps>`
   ${({ trophySize }) => css`
-    ${!!trophySize && trophyModifiers[trophySize]}
+    ${trophySize === 'small' && trophyModifiers.small()}
+    ${trophySize === 'medium' && trophyModifiers.medium()}
+    ${trophySize === 'large' && trophyModifiers.large()}
   `}
 `
 

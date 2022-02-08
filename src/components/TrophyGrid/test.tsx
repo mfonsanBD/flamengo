@@ -10,7 +10,7 @@ describe('<TrophyGrid />', () => {
       .c0 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 3rem 2rem;
+        grid-gap: 3rem 10rem;
       }
 
       <div

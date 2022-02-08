@@ -49,7 +49,7 @@ export const Overlay = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.black};
     width: 100%;
-    height: 100%;
+    height: 68.8rem;
     opacity: 0.7;
     display: block;
     position: absolute;
@@ -57,7 +57,7 @@ export const Overlay = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    z-index: ${theme.layers.overlay};
   `}
 `
 

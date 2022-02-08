@@ -2,7 +2,7 @@ import * as S from './styles'
 
 export type TrophyProps = {
   trophy: string
-  trophySize?: 'small' | 'medium' | 'large'
+  trophySize: string
   nameTop: string
   nameBottom: string
   wins: number
@@ -10,7 +10,7 @@ export type TrophyProps = {
 
 const Trophy = ({
   trophy,
-  trophySize = 'small',
+  trophySize,
   nameTop,
   nameBottom,
   wins

@@ -7,12 +7,14 @@ import TrophyArea from '.'
 const items = [
   {
     trophy: '/img/trophys/mundial-de-clubes.png',
+    trophySize: 'small',
     nameTop: 'Mundial',
     nameBottom: 'de Clubes',
     wins: 1
   },
   {
     trophy: '/img/trophys/taca-libertadores-da-america.png',
+    trophySize: 'medium',
     nameTop: 'Libertadores',
     nameBottom: 'da América',
     wins: 2
