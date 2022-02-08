@@ -55,7 +55,7 @@ export const Content = styled.div`
 
 export const Title = styled.h2`
   ${({ theme }) => css`
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     color: ${theme.colors.white};
     text-transform: uppercase;
     font-size: ${theme.font.sizes.large};

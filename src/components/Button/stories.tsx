@@ -26,6 +26,7 @@ export const withIcon: Story<ButtonProps> = (args) => <Button {...args} />
 
 withIcon.args = {
   size: 'small',
+  minimal: false,
   children: 'Buy Now',
   side: 'left',
   icon: <Ticket />
@@ -35,6 +36,19 @@ export const asMinimal: Story<ButtonProps> = (args) => <Button {...args} />
 
 asMinimal.args = {
   children: 'Buy Now',
+  color: 'default',
+  minimal: true,
+  side: 'right',
+  icon: <ArrowRight />,
+  as: 'a',
+  href: '/link'
+}
+
+export const isWhite: Story<ButtonProps> = (args) => <Button {...args} />
+
+isWhite.args = {
+  children: 'Buy Now',
+  color: 'white',
   minimal: true,
   side: 'right',
   icon: <ArrowRight />,

@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const Links = styled.p`
   ${({ theme }) => css`
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     color: ${theme.colors.white};
     text-transform: uppercase;
     display: flex;

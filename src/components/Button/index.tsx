@@ -7,6 +7,7 @@ type ButtonTypes =
 
 export type ButtonProps = {
   size?: 'small' | 'medium' | 'large'
+  color?: 'default' | 'white'
   fullWidth?: boolean
   minimal?: boolean
   side?: 'left' | 'right' | undefined
@@ -18,6 +19,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
   {
     children,
     size = 'medium',
+    color,
     fullWidth = false,
     minimal = false,
     side,
@@ -28,6 +30,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
 ) => (
   <S.Wrapper
     size={size}
+    color={color}
     fullWidth={fullWidth}
     hasIcon={!!icon}
     minimal={minimal}

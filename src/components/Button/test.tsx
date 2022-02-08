@@ -60,9 +60,13 @@ describe('<Button />', () => {
     expect(screen.getByText(/Buy Now/i)).toBeInTheDocument()
   })
 
-  it('should render a minimal version', () => {
+  it('should render a default minimal version', () => {
     renderWithTheme(
-      <Button icon={<AddShoppingCart data-testid="icon" />} minimal>
+      <Button
+        color="default"
+        icon={<AddShoppingCart data-testid="icon" />}
+        minimal
+      >
         Buy Now
       </Button>
     )
@@ -71,6 +75,27 @@ describe('<Button />', () => {
     expect(button).toHaveStyle({
       background: 'none',
       color: theme.colors.black
+    })
+    expect(button).toHaveStyleRule('background', 'none', {
+      modifier: ':hover'
+    })
+  })
+
+  it('should render a minimal version with white color', () => {
+    renderWithTheme(
+      <Button
+        color="white"
+        icon={<AddShoppingCart data-testid="icon" />}
+        minimal
+      >
+        Buy Now
+      </Button>
+    )
+
+    const button = screen.getByRole('button', { name: /buy now/i })
+    expect(button).toHaveStyle({
+      background: 'none',
+      color: theme.colors.white
     })
     expect(button).toHaveStyleRule('background', 'none', {
       modifier: ':hover'

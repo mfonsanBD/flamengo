@@ -12,7 +12,7 @@ const props = {
 
 describe('<Trophy />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<Trophy {...props} />)
+    renderWithTheme(<Trophy {...props} trophySize="small" />)
 
     expect(
       screen.getByRole('image', {
@@ -26,7 +26,7 @@ describe('<Trophy />', () => {
   })
 
   it('should render the smaller trophy', () => {
-    renderWithTheme(<Trophy {...props} />)
+    renderWithTheme(<Trophy {...props} trophySize="small" />)
 
     expect(
       screen.getByRole('image', {

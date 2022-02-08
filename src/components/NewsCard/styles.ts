@@ -41,7 +41,7 @@ export const Title = styled.h3`
   ${({ theme }) => css`
     color: ${theme.colors.darkGray};
     font-size: ${theme.font.sizes.medium};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     margin-bottom: ${theme.spacings.xxsmall};
     text-transform: uppercase;
   `}

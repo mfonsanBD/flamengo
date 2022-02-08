@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type LogoProps = {
-  color?: 'white' | 'red'
+  color?: 'white' | 'red' | 'black'
   size?: 'small' | 'normal' | 'large'
 }
 

@@ -6,6 +6,7 @@ export default {
   component: Trophy,
   args: {
     trophy: '/img/carioca.png',
+    trophySize: 'small',
     nameTop: 'Campeonato',
     nameBottom: 'Carioca',
     wins: 37

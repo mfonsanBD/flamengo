@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 1rem;
   align-items: flex-end;
+  justify-content: center;
 `
 
 const trophyModifiers = {
@@ -34,7 +35,7 @@ export const Wins = styled.h2`
     align-items: flex-end;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.xxlarge};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     height: 6.5rem;
     margin: 0;
     padding: 0;

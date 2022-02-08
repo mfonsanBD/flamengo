@@ -32,6 +32,6 @@ export const Error = styled.h3`
   ${({ theme }) => css`
     color: ${theme.colors.darkGray};
     font-size: 9rem;
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
   `}
 `

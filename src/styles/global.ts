@@ -14,11 +14,19 @@ const GlobalStyles: GlobalStyleComponent<
   DefaultTheme
 > = createGlobalStyle`
   @font-face {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat Regular';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: local('Montserrat Regular'), url('/fonts/Montserrat-Regular.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'Montserrat Bold';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local('Montserrat'), url('/fonts/Montserrat-Bold.woff2') format('woff2')
+    src: local('Montserrat Bold'), url('/fonts/Montserrat-Bold.woff2') format('woff2')
   }
 
   @font-face {

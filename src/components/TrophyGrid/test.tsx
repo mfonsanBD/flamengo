@@ -9,9 +9,8 @@ describe('<TrophyGrid />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(14.9rem,1fr));
-        grid-gap: 3rem;
-        margin: 3rem 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 3rem 2rem;
       }
 
       <div

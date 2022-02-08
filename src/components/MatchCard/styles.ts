@@ -20,7 +20,7 @@ export const Match = styled.p`
     color: ${theme.colors.lightGray};
     text-align: center;
     font-size: ${theme.font.sizes.xsmall};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     text-transform: uppercase;
   `}
 `
@@ -47,7 +47,7 @@ export const ClubName = styled.h4`
     color: ${theme.colors.darkGray};
     text-transform: uppercase;
     font-size: ${theme.font.sizes.small};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
   `}
 `
 
@@ -57,7 +57,7 @@ export const Hour = styled.div`
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
     color: ${theme.colors.darkGray};
     font-size: ${theme.font.sizes.large};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     margin: 0;
     border-radius: 5px;
   `}
@@ -67,7 +67,7 @@ export const VS = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.darkGray};
     font-size: ${theme.font.sizes.xlarge};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     margin: 0;
   `}
 `
@@ -82,7 +82,7 @@ export const Stadium = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.lightGray};
     font-size: ${theme.font.sizes.xsmall};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     text-transform: uppercase;
     margin-bottom: ${theme.spacings.xxsmall};
   `}

@@ -137,7 +137,7 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     text-transform: uppercase;
     color: ${theme.colors.white};
-    font-family: ${theme.font.family.montserrat};
+    font-family: ${theme.font.family.montserratBold};
     margin: ${theme.spacings.small} 0};
     font-size: ${theme.font.sizes.medium};
 
