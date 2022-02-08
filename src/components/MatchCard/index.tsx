@@ -61,7 +61,7 @@ const MatchCard = ({
 
     <S.MatchCardFooter>
       <S.Stadium>{stadium}</S.Stadium>
-      <Button size="medium" icon={<Ticket />} side="left">
+      <Button size="small" icon={<Ticket />} side="left">
         Compre já o seu ingresso
       </Button>
     </S.MatchCardFooter>
