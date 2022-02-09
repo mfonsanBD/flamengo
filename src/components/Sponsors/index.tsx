@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-type BrandData = {
+export type BrandData = {
   brand: string
   name: string
 }

@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import MatchCard, { MatchCardProps } from 'components/MatchCard'
 import Slider, { SliderSettings } from 'components/Slider'
+import MatchCard, { MatchCardProps } from 'components/MatchCard'
 
 import * as S from './styles'
 
 const settings: SliderSettings = {
   arrows: true,
-  slidesToShow: 3,
+  slidesToShow: 4,
   infinite: false,
   lazyLoad: 'ondemand',
   responsive: [

@@ -1,19 +1,28 @@
 import Menu from 'components/Menu'
-import Banner from 'components/Banner'
+import Banner, { BannerImageProps } from 'components/Banner'
+import Footer from 'components/Footer'
 import Heading from 'components/Heading'
-import Sponsors from 'components/Sponsors'
+import Sponsors, { BrandData } from 'components/Sponsors'
 import TrophyArea from 'components/TrophyArea'
 import MatchCardSlider from 'components/MatchCardSlider'
 
 import * as S from './styles'
+import { MatchCardProps } from 'components/MatchCard'
+import { TrophyProps } from 'components/Trophy'
 
-import bannerItems from 'components/Banner/mock'
-import matchItems from 'components/MatchCardSlider/mock'
-import trophysItems from 'components/TrophyArea/mock'
-import sponsorsItems from 'components/Sponsors/mock'
-import Footer from 'components/Footer'
+export type HomeTemplateProps = {
+  bannerItems: BannerImageProps[]
+  matchItems: MatchCardProps[]
+  trophysItems: TrophyProps[]
+  sponsorsItems: BrandData[]
+}
 
-const Home = () => (
+const Home = ({
+  bannerItems,
+  matchItems,
+  trophysItems,
+  sponsorsItems
+}: HomeTemplateProps) => (
   <S.Wrapper>
     <S.MenuSection>
       <Menu />
