@@ -7,9 +7,9 @@ import items from './mock'
 import MatchCardSlider from '.'
 
 describe('<MatchCardSlider />', () => {
-  it('should render with 3 active items', () => {
+  it('should render with 4 active items', () => {
     const { container } = renderWithTheme(<MatchCardSlider items={items} />)
-    expect(container.querySelectorAll('.slick-active')).toHaveLength(3)
+    expect(container.querySelectorAll('.slick-active')).toHaveLength(4)
   })
 
   it('should render white arrows if color passed', () => {

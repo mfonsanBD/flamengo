@@ -5,6 +5,11 @@ type CoverProps = Pick<NewsCardProps, 'cover'>
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    position: relative;
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     background: ${theme.colors.white};
   `}
 `

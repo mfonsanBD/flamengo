@@ -9,9 +9,8 @@ describe('<Grid />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
-        grid-gap: 3rem;
-        margin: 3rem 0;
+        grid-template-columns: repeat(auto-fill,minmax(27rem,1fr));
+        grid-gap: 2rem;
       }
 
       <div

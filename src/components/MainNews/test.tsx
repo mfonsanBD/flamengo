@@ -32,6 +32,6 @@ describe('<MainNews />', () => {
   it('should render button on MainNews', () => {
     renderWithTheme(<MainNews {...props} />)
 
-    expect(screen.getAllByText(/ver mais/i)).toHaveLength(2)
+    expect(screen.getAllByText(/ver mais/i)).toHaveLength(1)
   })
 })
