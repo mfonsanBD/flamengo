@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -8,5 +9,9 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     background-color: ${theme.colors.black};
+
+    ${media.lessThan('medium')`
+      padding: ${theme.spacings.xxlarge};
+    `}
   `}
 `

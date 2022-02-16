@@ -14,17 +14,19 @@ export const Image = styled.img`
 export const Title = styled.h2`
   ${({ theme }) => css`
     color: ${theme.colors.red};
-    font-size: ${theme.font.sizes.xxlarge};
-    font-family: ${theme.font.family.googleSansMedium};
+    font-size: ${theme.font.sizes.xlarge};
+    font-family: ${theme.font.family.montserratBold};
+    text-transform: uppercase;
+    line-height: 1;
   `}
 `
 
 export const description = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
-    font-family: ${theme.font.family.googleSansMedium};
-    margin-bottom: ${theme.spacings.medium};
+    font-size: ${theme.font.sizes.medium};
+    font-family: ${theme.font.family.googleSansRegular};
+    margin: ${theme.spacings.xxsmall} 0 ${theme.spacings.medium};
   `}
 `
 

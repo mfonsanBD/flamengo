@@ -30,6 +30,14 @@ const GlobalStyles: GlobalStyleComponent<
   }
 
   @font-face {
+    font-family: 'GoogleSans Regular';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('GoogleSans Regular'), url('/fonts/GoogleSans-Regular.woff2') format('woff2')
+  }
+
+  @font-face {
     font-family: 'GoogleSans Medium';
     font-style: normal;
     font-weight: 500;
