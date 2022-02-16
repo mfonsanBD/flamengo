@@ -1,20 +1,35 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 
-  .Tim {
-    height: 3rem;
-  }
-  .Havan,
-  .Eletrobras,
-  .Adidas {
-    height: 5rem;
-  }
+    ${media.lessThan('medium')`
+      gap: ${theme.spacings.medium};
+      justify-content: center;
+    `}
+
+    .Tim {
+      height: 3rem;
+    }
+    .Havan,
+    .Eletrobras,
+    .Adidas {
+      height: 5rem;
+    }
+  `}
 `
 
 export const Brand = styled.img`
-  height: 4rem;
+  ${({ theme }) => css`
+    height: 4rem;
+
+    ${media.lessThan('medium')`
+      margin-bottom: ${theme.spacings.medium};
+    `}
+  `}
 `

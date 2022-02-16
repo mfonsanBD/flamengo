@@ -9,8 +9,21 @@ describe('<TrophyGrid />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 9rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      @media (max-width:1440px) {
+        .c0 {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width:768px) {
+        .c0 {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 4rem;
+        }
       }
 
       <div

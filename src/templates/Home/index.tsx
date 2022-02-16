@@ -15,6 +15,7 @@ import MainNews, { MainNewsProps } from 'components/MainNews'
 import NewsCard, { NewsCardProps } from 'components/NewsCard'
 import Button from 'components/Button'
 import { Grid } from 'components/Grid'
+import MediaMatch from 'components/MediaMatch'
 
 export type HomeTemplateProps = {
   bannerItems: BannerImageProps[]
@@ -33,6 +34,8 @@ const Home = ({
   trophysItems,
   mainNews,
   newsItems,
+  flaTVNews,
+  flaTVItems,
   sponsorsItems
 }: HomeTemplateProps) => {
   return (
@@ -86,14 +89,21 @@ const Home = ({
 
       <S.FlaTVSection>
         <S.FlaTVLogo src="/img/fla-tv-branco.png" alt="FlaTV" />
-        <MainNews
-          cover={mainNews.cover}
-          title={mainNews.title}
-          mode="horizontal"
-          hasBadge
-        />
+
+        <MediaMatch lessThan="medium">
+          <MainNews cover={flaTVNews.cover} title={flaTVNews.title} hasBadge />
+        </MediaMatch>
+
+        <MediaMatch greaterThan="medium">
+          <MainNews
+            cover={flaTVNews.cover}
+            title={flaTVNews.title}
+            mode="horizontal"
+            hasBadge
+          />
+        </MediaMatch>
         <Grid>
-          {newsItems.map((item, index) => (
+          {flaTVItems.map((item, index) => (
             <NewsCard
               cover={item.cover}
               description={item.description}

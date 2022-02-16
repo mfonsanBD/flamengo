@@ -28,9 +28,13 @@ export const BannerWrapper = styled.div`
   height: 68.6rem;
   overflow: hidden;
 
-  ${media.lessThan('medium')`
-    height: 100vh;
+  ${media.lessThan('huge')`
+    height: 55rem;
   `}
+
+  ${media.lessThan('medium')`
+      height: 100vh;
+    `}
 
   img {
     width: 100%;
@@ -58,6 +62,14 @@ export const Overlay = styled.div`
     bottom: 0;
     left: 0;
     z-index: ${theme.layers.overlay};
+
+    ${media.lessThan('huge')`
+      height: 55rem;
+    `}
+
+    ${media.lessThan('medium')`
+      height: 100vh;
+    `}
   `}
 `
 
@@ -67,7 +79,7 @@ export const Thambs = styled.div`
     right: 3rem;
     bottom: 3rem;
     width: 50%;
-    z-index: 999999;
+    z-index: ${theme.layers.modal};
 
     .slick-slide > div {
       margin: 0 ${theme.spacings.xxsmall};
@@ -79,6 +91,7 @@ export const Thambs = styled.div`
       left: 0;
       bottom: 3rem;
       width: 100%;
+      padding: 0 ${theme.spacings.xsmall};
 
       .slick-slide > div {
         margin: 0 0.3rem;
@@ -95,7 +108,7 @@ export const Content = styled.div`
     left: 3rem;
     bottom: 3rem;
     display: block;
-    z-index: 999999;
+    z-index: ${theme.layers.modal};
     color: #ffffff;
 
     ${media.lessThan('medium')`
@@ -103,6 +116,7 @@ export const Content = styled.div`
       left: 0;
       bottom: 13rem;
       width: 100%;
+      padding: 0 ${theme.spacings.xsmall};
     `}
 
     a {

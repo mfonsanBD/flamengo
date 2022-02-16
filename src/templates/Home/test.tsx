@@ -16,6 +16,8 @@ const props = {
   trophysItems,
   mainNews: newsItems[0],
   newsItems: newsItems.slice(1, 7),
+  flaTVNews: newsItems[0],
+  flaTVItems: newsItems.slice(5, 10),
   sponsorsItems: sponsorsItems
 }
 

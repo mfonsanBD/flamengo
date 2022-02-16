@@ -144,7 +144,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    z-index: ${theme.layers.menu};
+    z-index: ${theme.layers.alwaysOnTop};
     overflow: hidden;
     left: 0;
     right: 0;

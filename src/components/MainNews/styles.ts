@@ -15,6 +15,7 @@ const wrapperModifiers = {
     `}
 
     ${Cover} {
+      height: 50rem;
       background-position: bottom center;
     }
 
@@ -24,7 +25,12 @@ const wrapperModifiers = {
       top: ${theme.spacings.medium};
 
       ${media.greaterThan('medium')`
+        width: 40rem;
         top: ${theme.spacings.large};
+      `}
+
+      ${media.greaterThan('huge')`
+        width: 90rem;
       `}
     }
   `,
@@ -88,6 +94,7 @@ export const Cover = styled.div<CoverProps>`
 export const Content = styled.div`
   ${({ theme }) => css`
     padding: 0 ${theme.spacings.medium};
+    word-wrap: break-word;
   `}
 `
 

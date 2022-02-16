@@ -20,7 +20,7 @@ export async function getStaticProps() {
       mainNews: newsItems[0],
       newsItems: newsItems.slice(1, 5),
       flaTVNews: newsItems[0],
-      flaTVItems: newsItems.slice(1, 5),
+      flaTVItems: newsItems.slice(5, 10),
       sponsorsItems
     }
   }
