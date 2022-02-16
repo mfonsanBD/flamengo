@@ -1,15 +1,63 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 import { MainNewsProps } from '.'
 
+type WrapperProps = Pick<MainNewsProps, 'mode'>
 type CoverProps = Pick<MainNewsProps, 'cover'>
 
-export const Wrapper = styled.div`
-  position: relative;
-  height: 32rem;
+const wrapperModifiers = {
+  horizontal: (theme: DefaultTheme) => css`
+    display: flex;
+    height: 32rem;
 
-  ${media.greaterThan('medium')`
-    height: 69.4rem;
+    ${media.greaterThan('medium')`
+      height: 32.9rem;
+    `}
+
+    ${Cover} {
+      background-position: bottom center;
+    }
+
+    ${Content} {
+      position: relative;
+      bottom: 0;
+      top: ${theme.spacings.medium};
+
+      ${media.greaterThan('medium')`
+        top: ${theme.spacings.large};
+      `}
+    }
+  `,
+  vertical: (theme: DefaultTheme) => css`
+    position: relative;
+    height: 32rem;
+
+    ${media.greaterThan('medium')`
+      height: 69.4rem;
+    `}
+
+    ${Cover} {
+      background-position: bottom center;
+
+      ${media.greaterThan('medium')`
+        background-position: top center;
+      `}
+    }
+
+    ${Content} {
+      position: absolute;
+      bottom: ${theme.spacings.medium};
+
+      ${media.greaterThan('medium')`
+        bottom: ${theme.spacings.xlarge};
+      `}
+    }
+  `
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, mode }) => css`
+    ${!!mode && wrapperModifiers[mode](theme)}
   `}
 `
 
@@ -23,11 +71,6 @@ export const Cover = styled.div<CoverProps>`
     height: 100%;
     background-image: url(${cover});
     background-size: cover;
-    background-position: bottom center;
-
-    ${media.greaterThan('medium')`
-      background-position: top center;
-    `}
 
     &::after {
       content: '';
@@ -44,13 +87,16 @@ export const Cover = styled.div<CoverProps>`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    position: absolute;
     padding: 0 ${theme.spacings.medium};
-    bottom: ${theme.spacings.medium};
+  `}
+`
 
-    ${media.greaterThan('medium')`
-      bottom: ${theme.spacings.xlarge};
-    `}
+export const Badge = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.red};
+    font-size: ${theme.font.sizes.small};
+    margin-bottom: ${theme.spacings.large};
+    text-transform: uppercase;
   `}
 `
 

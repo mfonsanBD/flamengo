@@ -15,23 +15,31 @@ describe('<MainNews />', () => {
     expect(
       screen.getByText(/inicio da caminhada no campeonato carioca/i)
     ).toBeInTheDocument()
-  })
+    expect(screen.getAllByText(/ver mais/i)).toHaveLength(1)
 
-  it('should render the cover image', () => {
-    renderWithTheme(<MainNews {...props} />)
-
-    const cover = screen.getByRole('image', {
-      name: /cover/i
-    })
-
-    expect(cover).toHaveStyle({
+    expect(
+      screen.getByRole('image', {
+        name: /cover/i
+      })
+    ).toHaveStyle({
       backgroundImage: 'url(/img/main-news-cover.jpg)'
     })
   })
 
-  it('should render button on MainNews', () => {
-    renderWithTheme(<MainNews {...props} />)
+  it('should render main news in horizontal mode', () => {
+    renderWithTheme(<MainNews {...props} mode="horizontal" />)
 
-    expect(screen.getAllByText(/ver mais/i)).toHaveLength(1)
+    expect(
+      screen.getByRole('image', {
+        name: /cover/i
+      }).parentElement
+    ).toHaveStyle({
+      display: 'flex'
+    })
+  })
+
+  it('should render hasBadge', () => {
+    renderWithTheme(<MainNews {...props} mode="horizontal" hasBadge />)
+    expect(screen.getByText(/time principal/i)).toBeInTheDocument()
   })
 })

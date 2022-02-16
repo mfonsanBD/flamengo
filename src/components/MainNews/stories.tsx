@@ -4,9 +4,10 @@ import MainNews, { MainNewsProps } from '.'
 export default {
   title: 'MainNews',
   component: MainNews,
-  args: {
-    cover: '/img/main-news-cover.jpg',
-    title: 'Inicio da caminhada no Campeonato Carioca'
+  parameters: {
+    backgrounds: {
+      default: 'black'
+    }
   }
 } as Meta
 
@@ -15,3 +16,18 @@ export const Default: Story<MainNewsProps> = (args) => (
     <MainNews {...args} />
   </div>
 )
+
+Default.args = {
+  cover: '/img/main-news-cover.jpg',
+  title: 'Inicio da caminhada no Campeonato Carioca'
+}
+
+export const HorizontalMode: Story<MainNewsProps> = (args) => (
+  <MainNews {...args} hasBadge />
+)
+
+HorizontalMode.args = {
+  cover: '/img/main-news-cover.jpg',
+  title: 'Inicio da caminhada no Campeonato Carioca',
+  mode: 'horizontal'
+}

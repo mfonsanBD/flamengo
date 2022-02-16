@@ -22,6 +22,8 @@ export type HomeTemplateProps = {
   trophysItems: TrophyProps[]
   mainNews: MainNewsProps
   newsItems: NewsCardProps[]
+  flaTVNews: MainNewsProps
+  flaTVItems: NewsCardProps[]
   sponsorsItems: BrandData[]
 }
 
@@ -75,12 +77,47 @@ const Home = ({
             size="small"
             icon={<ArrowRight />}
             as="a"
-            href="/titulos"
+            href="/noticias"
           >
             Ver Todas as Notícias
           </Button>
         </S.ButtonArea>
       </S.NewsSection>
+
+      <S.FlaTVSection>
+        <S.FlaTVLogo src="/img/fla-tv-branco.png" alt="FlaTV" />
+        <MainNews
+          cover={mainNews.cover}
+          title={mainNews.title}
+          mode="horizontal"
+          hasBadge
+        />
+        <Grid>
+          {newsItems.map((item, index) => (
+            <NewsCard
+              cover={item.cover}
+              description={item.description}
+              title={item.title}
+              date={item.date}
+              key={index}
+            />
+          ))}
+        </Grid>
+
+        <S.ButtonArea>
+          <Button
+            minimal
+            color="white"
+            side="right"
+            size="small"
+            icon={<ArrowRight />}
+            as="a"
+            href="/fla-tv"
+          >
+            Ver Todos os Epsódios
+          </Button>
+        </S.ButtonArea>
+      </S.FlaTVSection>
 
       <S.SponsorsSection>
         <Sponsors item={sponsorsItems} />

@@ -18,7 +18,9 @@ export async function getStaticProps() {
       matchItems,
       trophysItems,
       mainNews: newsItems[0],
-      newsItems: newsItems.slice(1, 7),
+      newsItems: newsItems.slice(1, 5),
+      flaTVNews: newsItems[0],
+      flaTVItems: newsItems.slice(1, 5),
       sponsorsItems
     }
   }

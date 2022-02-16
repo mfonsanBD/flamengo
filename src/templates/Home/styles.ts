@@ -37,6 +37,16 @@ export const NewsSection = styled.section`
   `}
 `
 
+export const FlaTVSection = styled.section`
+  ${({ theme }) => css`
+    padding: 12rem ${theme.spacings.xxlarge};
+    display: flex;
+    flex-direction: column;
+    gap: ${theme.spacings.xlarge};
+    background-color: ${theme.colors.black};
+  `}
+`
+
 export const AllNews = styled.div`
   ${({ theme }) => css`
     display: grid;
@@ -59,6 +69,11 @@ export const ButtonArea = styled.div`
     text-align: center;
     z-index: ${theme.layers.menu};
   `}
+`
+
+export const FlaTVLogo = styled.img`
+  height: 6rem;
+  width: 17.7rem;
 `
 
 export const SponsorsSection = styled.section`
