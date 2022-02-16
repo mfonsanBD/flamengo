@@ -23,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
           <meta name="theme-color" content={theme.colors.black} />
           <meta
             name="description"
-            content="The best games stories in the world!"
+            content="Clube de Regatas do Flamengo - Raça, amor e paixão!"
           />
         </Head>
         <GlobalStyles />
