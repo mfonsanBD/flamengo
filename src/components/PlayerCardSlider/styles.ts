@@ -7,8 +7,9 @@ export const Wrapper = styled.section`
 
     ${media.greaterThan('medium')`
       padding-top: 3rem;
-      height: 28rem;
+      height: 52rem;
     `}
+
     .slick-track,
     .slick-list {
       display: flex;

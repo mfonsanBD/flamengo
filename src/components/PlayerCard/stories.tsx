@@ -1,12 +1,16 @@
 import { Story, Meta } from '@storybook/react'
 import PlayerCard, { PlayerCardProps } from '.'
 
-import player from './mock'
-
 export default {
   title: 'PlayerCard',
   component: PlayerCard,
-  args: player
+  args: {
+    floatImage: '/img/player/gabigol.png',
+    number: '9',
+    name: 'Gabriel Barbosa',
+    buttonLabel: 'Ficha do Jogador',
+    buttonLink: '/gabriel-barbosa'
+  }
 } as Meta
 
 export const Default: Story<PlayerCardProps> = (args) => (
