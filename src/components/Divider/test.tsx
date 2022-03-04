@@ -3,7 +3,7 @@ import { renderWithTheme } from 'utils/testes/helpers'
 import { Divider } from '.'
 
 describe('<Divider />', () => {
-  it('should render the heading', () => {
+  it('should render correctly', () => {
     const { container } = renderWithTheme(<Divider />)
 
     expect(container.firstChild).toMatchInlineSnapshot(`

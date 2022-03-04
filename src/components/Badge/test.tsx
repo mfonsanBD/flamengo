@@ -15,10 +15,18 @@ describe('<Badge />', () => {
   })
 
   it('should render red background', () => {
-    renderWithTheme(<Badge {...props} />)
+    renderWithTheme(<Badge {...props} color="red" />)
 
-    expect(screen.getByText(/Carioca/i).parentElement).toHaveStyle({
+    expect(screen.getByText(/Carioca/i)).toHaveStyle({
       backgroundColor: '#F80032'
+    })
+  })
+
+  it('should render white background', () => {
+    renderWithTheme(<Badge {...props} color="white" />)
+
+    expect(screen.getByText(/Carioca/i)).toHaveStyle({
+      backgroundColor: '#FAFAFA'
     })
   })
 })
