@@ -11,7 +11,12 @@ export const Wrapper = styled.div`
     align-items: center;
 
     ${media.lessThan('medium')`
+      width: 100%;
     `}
+
+    @media (max-width: 400px) {
+      gap: ${theme.spacings.large} ${theme.spacings.xlarge};
+    }
   `}
 `
 

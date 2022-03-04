@@ -16,28 +16,16 @@ describe('<PlayerData />', () => {
   it('should render correctly', () => {
     renderWithTheme(<PlayerData {...props} />)
 
-    expect(
-      screen.getByRole('heading', { name: /gabriel barbosa almeida/i })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText(/gabriel barbosa almeida/i)).toHaveLength(2)
 
-    expect(
-      screen.getByRole('heading', { name: '30/08/1996 (25 anos)' })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText('30/08/1996 (25 anos)')).toHaveLength(2)
 
-    expect(
-      screen.getByRole('heading', { name: /brasileiro/i })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText(/brasileiro/i)).toHaveLength(2)
 
-    expect(
-      screen.getByRole('heading', { name: 'São Bernardo do Campo/SP' })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText('São Bernardo do Campo/SP')).toHaveLength(2)
 
-    expect(
-      screen.getByRole('heading', { name: /esquerdo/i })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText(/esquerdo/i)).toHaveLength(2)
 
-    expect(
-      screen.getByRole('heading', { name: 'Janeiro/2019' })
-    ).toBeInTheDocument()
+    expect(screen.getAllByText('Janeiro/2019')).toHaveLength(2)
   })
 })
