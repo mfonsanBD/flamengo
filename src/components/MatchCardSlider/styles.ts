@@ -41,9 +41,11 @@ export const Wrapper = styled.section`
       background-color: ${theme.colors.red};
       cursor: pointer;
       position: absolute;
+      border: none;
       top: -1rem;
       padding: 0.5rem 1rem;
       transform: translate(0, -50%);
+      height: 2.2rem;
     }
     .slick-prev {
       top: -2rem;

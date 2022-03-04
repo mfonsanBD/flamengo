@@ -1,15 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
+import React from 'react'
+
 import Slider, { SliderSettings } from 'components/Slider'
 import MatchCard, { MatchCardProps } from 'components/MatchCard'
 
 import * as S from './styles'
 
-const ArrowRight = () => {
-  return <img src="/img/arrow-right.svg" aria-label="next match" />
+type ArrowsProps = React.HTMLAttributes<HTMLDivElement>
+
+const ArrowRight = (props: ArrowsProps) => {
+  const { className, onClick } = props
+  return (
+    <div className={className} onClick={onClick}>
+      <img src="/img/arrow-right.svg" aria-label="next match" />
+    </div>
+  )
 }
 
-const ArrowLeft = () => {
-  return <img src="/img/arrow-left.svg" aria-label="previous match" />
+const ArrowLeft = (props: ArrowsProps) => {
+  const { className, onClick } = props
+  return (
+    <div className={className} onClick={onClick}>
+      <img src="/img/arrow-left.svg" aria-label="previous match" />
+    </div>
+  )
 }
 
 const settings: SliderSettings = {
@@ -47,8 +61,8 @@ const settings: SliderSettings = {
       }
     }
   ],
-  nextArrow: ArrowRight(),
-  prevArrow: ArrowLeft()
+  nextArrow: <ArrowRight />,
+  prevArrow: <ArrowLeft />
 }
 
 export type MatchCardSliderProps = {

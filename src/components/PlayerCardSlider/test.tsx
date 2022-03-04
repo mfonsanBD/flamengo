@@ -15,10 +15,12 @@ describe('<PlayerCardSlider />', () => {
   it('should render white arrows if color passed', () => {
     renderWithTheme(<PlayerCardSlider items={items} />)
 
-    expect(screen.getByLabelText(/previous match/i)).toHaveStyle({
-      backgroundColor: '#F80032'
-    })
-    expect(screen.getByLabelText(/next match/i)).toHaveStyle({
+    expect(screen.getByLabelText(/previous match/i)?.parentElement).toHaveStyle(
+      {
+        backgroundColor: '#F80032'
+      }
+    )
+    expect(screen.getByLabelText(/next match/i)?.parentElement).toHaveStyle({
       backgroundColor: '#F80032'
     })
   })
