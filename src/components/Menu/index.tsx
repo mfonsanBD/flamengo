@@ -32,12 +32,16 @@ const Menu = ({ backgroundColor = 'transparent' }: MenuProps) => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
+          <Link href="/" passHref>
+            <S.MenuLink>Página Inicial</S.MenuLink>
+          </Link>
+
           <Link href="/equipe" passHref>
             <S.MenuLink>Equipe</S.MenuLink>
           </Link>
 
-          <Link href="/calendario-resultados" passHref>
-            <S.MenuLink>Calendário&Resultados</S.MenuLink>
+          <Link href="/classificacao" passHref>
+            <S.MenuLink>Classificação</S.MenuLink>
           </Link>
 
           <S.LogoWrapper>
@@ -48,12 +52,12 @@ const Menu = ({ backgroundColor = 'transparent' }: MenuProps) => {
             </Link>
           </S.LogoWrapper>
 
-          <Link href="/classificacao" passHref>
-            <S.MenuLink>Classificação</S.MenuLink>
-          </Link>
-
           <Link href="/titulos" passHref>
             <S.MenuLink>Títulos</S.MenuLink>
+          </Link>
+
+          <Link href="/calendario-resultados" passHref>
+            <S.MenuLink>Calendário&Resultados</S.MenuLink>
           </Link>
 
           <Link href="/noticias" passHref>
@@ -66,12 +70,12 @@ const Menu = ({ backgroundColor = 'transparent' }: MenuProps) => {
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
 
         <S.MenuNav>
-          <Link href="/equipe" passHref>
-            <S.MenuLink>Equipe</S.MenuLink>
+          <Link href="/" passHref>
+            <S.MenuLink>Página Inicial</S.MenuLink>
           </Link>
 
-          <Link href="/calendario-resultados" passHref>
-            <S.MenuLink>Calendário&Resultados</S.MenuLink>
+          <Link href="/equipe" passHref>
+            <S.MenuLink>Equipe</S.MenuLink>
           </Link>
 
           <Link href="/classificacao" passHref>
@@ -80,6 +84,10 @@ const Menu = ({ backgroundColor = 'transparent' }: MenuProps) => {
 
           <Link href="/titulos" passHref>
             <S.MenuLink>Títulos</S.MenuLink>
+          </Link>
+
+          <Link href="/calendario-resultados" passHref>
+            <S.MenuLink>Calendário&Resultados</S.MenuLink>
           </Link>
 
           <Link href="/noticias" passHref>
