@@ -25,7 +25,7 @@ const PlayerCard = ({
 
     <S.PlayerName>{name}</S.PlayerName>
 
-    <Link href={buttonLink} passHref>
+    <Link href={`/jogador${buttonLink}`} passHref>
       <a>
         <S.PlayerButton>{buttonLabel}</S.PlayerButton>
       </a>

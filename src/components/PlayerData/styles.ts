@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
     display: flex;
     gap: ${theme.spacings.large};
 
+    ${media.lessThan('huge')`
+      width: 100%;
+      gap: ${theme.spacings.small};
+    `}
+
     ${media.lessThan('medium')`
       width: 100%;
     `}

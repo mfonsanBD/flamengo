@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -21,6 +22,10 @@ export const Apelido = styled.h1`
     font-size: 20rem;
     text-align: center;
     line-height: 0.8;
+
+    ${media.lessThan('medium')`
+      font-size: 16rem;
+    `}
   `}
 `
 

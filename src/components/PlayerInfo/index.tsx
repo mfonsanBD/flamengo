@@ -1,3 +1,4 @@
+import MediaMatch from 'components/MediaMatch'
 import PlayerData, { PlayerDataProps } from 'components/PlayerData'
 import PlayerStatistics, {
   PlayerStatisticsPorps
@@ -13,7 +14,11 @@ export type PlayerInfoProps = {
 const PlayerInfo = ({ data, statistics }: PlayerInfoProps) => (
   <S.Wrapper>
     <PlayerStatistics {...statistics} />
-    <S.Divider />
+
+    <MediaMatch greaterThan="huge">
+      <S.Divider />
+    </MediaMatch>
+
     <PlayerData {...data} />
   </S.Wrapper>
 )

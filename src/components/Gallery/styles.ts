@@ -24,6 +24,18 @@ export const Wrapper = styled.section`
       margin: 0 ${theme.spacings.xxsmall};
       flex: 1 0 auto;
       height: 100%;
+
+      ${media.lessThan('huge')`
+        margin: 0;
+      `}
+
+      ${media.lessThan('medium')`
+        margin: 0;
+      `}
+
+      @media(max-width: 400px) {
+        margin: 0;
+      }
     }
 
     .slick-list {
@@ -31,12 +43,22 @@ export const Wrapper = styled.section`
       height: 70rem;
       margin: 0 -${theme.spacings.xxsmall};
 
+      ${media.lessThan('huge')`
+        width: 81.9rem;
+        height: 54.6rem;
+        margin: 0;
+      `}
+
       ${media.lessThan('medium')`
+        width: 100%;
         height: 25.2rem;
+        margin: 0;
       `}
 
       @media(max-width: 400px) {
+        width: 100%;
         height: 20rem;
+        margin: 0;
       }
     }
 
@@ -65,7 +87,11 @@ export const Wrapper = styled.section`
     }
 
     .slick-prev {
-      left: 141.5rem;
+      left: 163.5rem;
+
+      ${media.lessThan('huge')`
+        left: 86.5rem;
+      `}
 
       ${media.lessThan('medium')`
         left: 30rem;
@@ -76,7 +102,11 @@ export const Wrapper = styled.section`
       `}
     }
     .slick-next {
-      left: 147.5rem;
+      left: 174.5rem;
+
+      ${media.lessThan('huge')`
+        left: 93.5rem;
+      `}
 
       ${media.lessThan('medium')`
         left: 34rem;
@@ -126,9 +156,14 @@ export const ClubAndPlayerNames = styled.div`
     align-items: center;
     justify-content: center;
 
+    ${media.lessThan('huge')`
+      height: 42.6rem;
+    `}
+
     ${media.lessThan('medium')`
       width: 100%;
       height: ${theme.spacings.xlarge};
+      border-bottom: thin solid ${theme.colors.background};
     `}
 
     p {

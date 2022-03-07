@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -25,6 +26,10 @@ export const PlayerNumber = styled.h2`
     margin-bottom: 19.5rem;
     position: relative;
     z-index: ${theme.layers.modal};
+
+    ${media.lessThan('medium')`
+      text-align: right;
+    `}
   `}
 `
 

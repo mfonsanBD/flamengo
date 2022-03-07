@@ -85,7 +85,7 @@ export const MenuGroup = styled.div`
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
     position: absolute;
-    left: 0;
+    left: ${theme.spacings.xsmall};
     color: ${theme.colors.white};
     width: 2.4rem;
     height: 2.4rem;
@@ -177,7 +177,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     ${MenuLink} {
       color: ${theme.colors.black};
       font-weight: 700;
-      font-size: ${theme.font.sizes.small};
+      font-size: ${theme.font.sizes.medium};
       margin-bottom: ${theme.spacings.small};
 
       transition: transform 0.3s ease-in-out;

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    height: 10rem;
+    height: ${theme.spacings.xlarge};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,7 @@ export const Links = styled.p`
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    font-size: ${theme.font.sizes.small};
 
     a {
       color: ${theme.colors.white};

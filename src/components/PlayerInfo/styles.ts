@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 12rem;
+    z-index: ${theme.layers.menu};
+
+    ${media.lessThan('huge')`
+      gap: ${theme.spacings.large};
+    `}
 
     ${media.lessThan('medium')`
       flex-direction: column-reverse;

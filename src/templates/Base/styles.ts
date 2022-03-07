@@ -9,7 +9,10 @@ export const Wrapper = styled.div`
 `
 
 export const MenuSection = styled.section`
-  width: 100%;
+  ${({ theme }) => css`
+    width: 100%;
+    z-index: ${theme.layers.alwaysOnTop};
+  `}
 `
 
 export const SponsorsSection = styled.section`
