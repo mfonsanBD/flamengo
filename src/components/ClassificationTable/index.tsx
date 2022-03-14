@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-type ClassificationData = {
+export type ClassificationData = {
   simbolo: string
   time: string
   jogos: number
